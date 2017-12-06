@@ -7,17 +7,18 @@ import java.io.FileNotFoundException;
 class WordChain {
 
 	private List<String> dictionary;
+	private List<String> wordchain;
 
 	public WordChain() {
-		dictionary = getDictionary();
+		this.dictionary = getDictionary();
+		this.wordchain = new ArrayList<String>();
 	}
 
 	public String[] solves(String from, String to) {
-		List<String> wordchain = new ArrayList<String>();
-
+		
 		// TODO
 
-		return wordchain.toArray(new String[0]);
+		return this.wordchain.toArray(new String[0]);
 	}
 
 	private List<String> getDictionary() {
