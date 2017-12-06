@@ -6,8 +6,13 @@ import java.io.FileNotFoundException;
 
 class WordChain {
 
-	public static String[] solves(String from, String to) {
-		List<String> dictionary = getDictionary();
+	private List<String> dictionary;
+
+	public WordChain() {
+		dictionary = getDictionary();
+	}
+
+	public String[] solves(String from, String to) {
 		List<String> wordchain = new ArrayList<String>();
 
 		// TODO
@@ -15,7 +20,7 @@ class WordChain {
 		return wordchain.toArray(new String[0]);
 	}
 
-	public static List<String> getDictionary() {
+	private List<String> getDictionary() {
 		List<String> dictionary = new ArrayList<String>();
 
 		try {

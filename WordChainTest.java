@@ -11,29 +11,31 @@ public class WordChainTest extends TestCase {
 
 	@Test
 	public void test1() throws Exception {
-		String[] wordchain = {
+		String[] result = {
 			"cat",
 			"cot",
 			"cog",
 			"dog"
 		};
-		Assert.assertArrayEquals(wordchain, WordChain.solves("cat", "dog"));
+		WordChain wordchain = new WordChain();
+		Assert.assertArrayEquals(result, wordchain.solves("cat", "dog"));
 	}
 
 	@Test
 	public void test2() throws Exception {
-		String[] wordchain = {
+		String[] result = {
 			"lead",
 			"load",
 			"goad",
 			"gold"
 		};
-		Assert.assertArrayEquals(wordchain, WordChain.solves("lead", "gold"));
+		WordChain wordchain = new WordChain();
+		Assert.assertArrayEquals(result, wordchain.solves("lead", "gold"));
 	}
 
 	@Test
 	public void test3() throws Exception {
-		String[] wordchain = {
+		String[] result = {
 			"ruby",
 			"rubs",
 			"robs",
@@ -41,6 +43,7 @@ public class WordChainTest extends TestCase {
 			"rode",
 			"code"
 		};
-		Assert.assertArrayEquals(wordchain, WordChain.solves("lead", "code"));
+		WordChain wordchain = new WordChain();
+		Assert.assertArrayEquals(result, wordchain.solves("ruby", "code"));
 	}
 }
